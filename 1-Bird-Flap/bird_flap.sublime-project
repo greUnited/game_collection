@@ -1,0 +1,24 @@
+{
+	"folders":
+	[
+		{
+			"path" : "."
+		}
+	],
+	"build_systems" :
+	[
+		{
+			"name" : "Build MSVC",
+			"shell_cmd" : "msvc.bat && build.bat",
+			"working_dir" : "${project_path}",
+			"file_regex": "^(.+)\\(([0-9]+):([0-9]+)\\) (.+)$"
+		},
+		{
+			"name" : "Build MSVC & Run",
+			"shell_cmd" : "msvc.bat && build.bat && bin\\bird_flap.exe",
+			"working_dir" : "${project_path}",
+			"file_regex": "^(.+)\\(([0-9]+):([0-9]+)\\) (.+)$"
+		},
+		
+	]
+}
